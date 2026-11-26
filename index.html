@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="STAN ELECTRIC provides electrical project support for residential properties in Cumming and North Atlanta, Georgia."
+    content="STAN ELECTRIC provides residential electrical project support in Cumming and North Atlanta, Georgia."
   >
 
   <style>
@@ -24,8 +24,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111111;
+      background: #fff;
+      color: #111;
       line-height: 1.6;
     }
 
@@ -34,9 +34,14 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
+      width: min(1150px, 92%);
+      margin: auto;
     }
 
     /* HEADER */
@@ -44,61 +49,57 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
       border-bottom: 1px solid #e8e8e8;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
     }
 
     .nav {
-      min-height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+    .logo img {
+      width: 150px;
+      height: 55px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .nav-links {
       display: flex;
       gap: 28px;
-      align-items: center;
       font-size: 14px;
       font-weight: 600;
     }
 
     .nav-links a:hover {
-      color: #d6a900;
+      color: #c49b00;
     }
 
     .call-button {
-      background: #111111;
-      color: white;
-      padding: 12px 18px;
+      background: #111;
+      color: #fff;
+      padding: 13px 19px;
       border-radius: 7px;
       font-weight: 700;
       font-size: 14px;
     }
 
-    .call-button:hover {
-      background: #333333;
-    }
-
     /* HERO */
 
     .hero {
-      padding: 110px 0 100px;
       background: #f6f6f4;
+      padding: 105px 0;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 70px;
       align-items: center;
     }
@@ -107,25 +108,25 @@
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 2px;
-      color: #777777;
+      color: #777;
       margin-bottom: 20px;
     }
 
     h1 {
       font-size: clamp(48px, 7vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -3px;
+      line-height: .98;
+      letter-spacing: -4px;
       margin-bottom: 28px;
     }
 
     .hero-text {
-      max-width: 600px;
-      color: #555555;
+      max-width: 620px;
       font-size: 18px;
+      color: #555;
       margin-bottom: 35px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
@@ -138,25 +139,21 @@
       font-weight: 700;
     }
 
-    .button-primary {
-      background: #111111;
-      color: white;
+    .primary {
+      background: #111;
+      color: #fff;
     }
 
-    .button-secondary {
-      border: 1px solid #cccccc;
-      background: white;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
+    .secondary {
+      background: #fff;
+      border: 1px solid #ccc;
     }
 
     .hero-card {
-      background: #111111;
-      color: white;
-      min-height: 360px;
-      border-radius: 14px;
+      min-height: 370px;
+      background: #111;
+      color: #fff;
+      border-radius: 15px;
       padding: 35px;
       display: flex;
       flex-direction: column;
@@ -164,43 +161,46 @@
     }
 
     .hero-card .bolt {
-      font-size: 80px;
-      color: #e1b400;
+      color: #e0b400;
+      font-size: 90px;
+      line-height: 1;
       margin-bottom: auto;
     }
 
     .hero-card h2 {
-      font-size: 27px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
     .hero-card p {
-      color: #bbbbbb;
+      color: #aaa;
     }
 
-    /* SECTIONS */
+    /* GENERAL */
 
     section {
-      padding: 90px 0;
-    }
-
-    .section-header {
-      margin-bottom: 45px;
+      padding: 95px 0;
     }
 
     .section-label {
+      color: #777;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
-      color: #777777;
       text-transform: uppercase;
       margin-bottom: 12px;
     }
 
-    h2.section-title {
-      font-size: clamp(35px, 5vw, 55px);
-      letter-spacing: -2px;
+    .section-title {
+      font-size: clamp(36px, 5vw, 58px);
       line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .section-description {
+      color: #666;
+      max-width: 650px;
+      margin-top: 18px;
     }
 
     /* SERVICES */
@@ -209,19 +209,20 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
+      margin-top: 45px;
     }
 
     .service {
-      border: 1px solid #e4e4e4;
-      border-radius: 12px;
       padding: 30px;
+      border: 1px solid #e2e2e2;
+      border-radius: 12px;
       min-height: 190px;
     }
 
-    .service-number {
+    .number {
+      color: #999;
       font-size: 13px;
-      color: #999999;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .service h3 {
@@ -230,38 +231,37 @@
     }
 
     .service p {
-      color: #666666;
+      color: #666;
       font-size: 15px;
     }
 
     /* PROJECTS */
 
-    .projects {
-      background: #111111;
-      color: white;
+    .dark {
+      background: #111;
+      color: #fff;
     }
 
-    .projects .section-label {
-      color: #999999;
+    .dark .section-label {
+      color: #999;
     }
 
-    .project-note {
-      color: #aaaaaa;
-      margin-top: 15px;
+    .dark .section-description {
+      color: #aaa;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
-      margin-top: 40px;
+      margin-top: 45px;
     }
 
     .project {
       min-height: 270px;
+      background: #222;
+      border: 1px solid #333;
       border-radius: 12px;
-      background: #222222;
-      border: 1px solid #333333;
       padding: 28px;
       display: flex;
       flex-direction: column;
@@ -269,42 +269,124 @@
     }
 
     .project span {
-      color: #d8b000;
+      color: #e0b400;
       font-size: 12px;
-      text-transform: uppercase;
       letter-spacing: 1.5px;
+      text-transform: uppercase;
       margin-bottom: 8px;
     }
 
     .project h3 {
-      font-size: 24px;
+      font-size: 25px;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+    }
+
+    .instagram-button {
+      background: #111;
+      color: #fff;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .instagram-card {
+      aspect-ratio: 1;
+      background: #f0f0ee;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* REVIEWS */
+
+    .reviews {
+      background: #f6f6f4;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+
+    .review {
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 12px;
+      padding: 28px;
+      min-height: 190px;
+    }
+
+    .stars {
+      color: #d3a900;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .review p {
+      color: #555;
+    }
+
+    .review-author {
+      margin-top: 20px;
+      font-weight: 700;
+    }
+
+    .google-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 20px;
+      background: #111;
+      color: #fff;
+      border-radius: 7px;
+      font-weight: 700;
     }
 
     /* ABOUT */
 
     .about-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: .8fr 1.2fr;
       gap: 70px;
       align-items: center;
     }
 
     .about-photo {
       min-height: 420px;
-      background: #eeeeec;
+      background: #eee;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #888888;
+      color: #888;
       text-align: center;
-      padding: 30px;
     }
 
     .about-text p {
-      color: #555555;
-      margin-bottom: 20px;
+      color: #555;
       font-size: 17px;
+      margin-top: 20px;
     }
 
     /* SERVICE AREA */
@@ -316,7 +398,8 @@
     .area-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 45px;
+      align-items: center;
     }
 
     .area-list {
@@ -327,30 +410,122 @@
     }
 
     .area-list div {
-      background: white;
+      background: #fff;
+      border: 1px solid #e4e4e4;
       padding: 16px;
       border-radius: 7px;
-      border: 1px solid #e5e5e5;
     }
 
-    .map {
-      min-height: 350px;
-      border-radius: 14px;
-      overflow: hidden;
+    .map-placeholder {
+      min-height: 390px;
       background: #ddd;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      text-align: center;
+      padding: 30px;
     }
 
-    .map iframe {
+    /* QUOTE FORM */
+
+    .quote {
+      background: #111;
+      color: #fff;
+    }
+
+    .quote .section-label {
+      color: #aaa;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .quote-description {
+      color: #aaa;
+      margin-top: 20px;
+      max-width: 480px;
+    }
+
+    .quote-form {
+      background: #fff;
+      color: #111;
+      border-radius: 14px;
+      padding: 35px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
       width: 100%;
-      height: 100%;
-      min-height: 350px;
+      border: 1px solid #d5d5d5;
+      border-radius: 7px;
+      padding: 13px;
+      font: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-top: 4px;
+    }
+
+    .submit-button {
+      width: 100%;
       border: 0;
+      background: #111;
+      color: #fff;
+      padding: 16px;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 22px;
     }
 
     /* CONTACT */
 
     .contact {
-      background: #e1b400;
+      background: #e0b400;
     }
 
     .contact-grid {
@@ -361,17 +536,13 @@
     }
 
     .contact h2 {
-      font-size: clamp(32px, 5vw, 55px);
+      font-size: clamp(35px, 5vw, 58px);
       letter-spacing: -2px;
     }
 
-    .contact p {
-      margin-top: 10px;
-    }
-
     .contact-button {
-      background: #111111;
-      color: white;
+      background: #111;
+      color: #fff;
       padding: 17px 25px;
       border-radius: 7px;
       font-weight: 700;
@@ -381,8 +552,8 @@
     /* FOOTER */
 
     footer {
-      background: #111111;
-      color: white;
+      background: #111;
+      color: #fff;
       padding: 35px 0;
     }
 
@@ -393,36 +564,43 @@
     }
 
     footer p {
-      color: #999999;
+      color: #999;
       font-size: 14px;
     }
 
     .footer-links {
       display: flex;
       gap: 20px;
-      color: #cccccc;
+      color: #ccc;
       font-size: 14px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
+
       .nav-links {
         display: none;
       }
 
       .hero-grid,
       .about-grid,
-      .area-grid {
+      .area-grid,
+      .quote-grid {
         grid-template-columns: 1fr;
       }
 
-      .services-grid {
+      .services-grid,
+      .reviews-grid {
         grid-template-columns: 1fr;
       }
 
       .projects-grid {
         grid-template-columns: 1fr;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero {
@@ -433,14 +611,34 @@
         padding: 70px 0;
       }
 
+      .instagram-header {
+        align-items: start;
+        flex-direction: column;
+      }
+
       .contact-grid,
       .footer-grid {
         flex-direction: column;
         align-items: flex-start;
       }
+    }
+
+    @media (max-width: 600px) {
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
 
       .area-list {
         grid-template-columns: 1fr;
+      }
+
+      .logo img {
+        width: 125px;
       }
     }
   </style>
@@ -448,367 +646,615 @@
 
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
 
-  <header>
-    <div class="container nav">
+<header>
+  <div class="container nav">
 
-      <a href="#" class="logo">
-  <img src="logo.png" alt="STAN ELECTRIC" style="width: 180px; height: 52px; object-fit: cover; object-position: center;">
-</a>
+    <a href="#" class="logo">
+      <img src="logo.png" alt="STAN ELECTRIC">
+    </a>
 
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#area">Service Area</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#area">Service Area</a>
+      <a href="#quote">Quote</a>
+    </nav>
 
-      <a href="tel:+14049367444" class="call-button">
-        Call / Text
-      </a>
+    <a href="tel:+14049367444" class="call-button">
+      Call / Text
+    </a>
 
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-
-  <main>
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-        <div>
-
-          <div class="eyebrow">
-            STAN ELECTRIC · CUMMING, GEORGIA
-          </div>
-
-          <h1>
-            Reliable Electrical Work for Your Home.
-          </h1>
-
-          <p class="hero-text">
-            Residential electrical project support for homeowners
-            throughout Cumming and North Atlanta.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#contact" class="button button-primary">
-              Request a Quote
-            </a>
-
-            <a href="tel:+14049367444" class="button button-secondary">
-              Call / Text
-            </a>
-
-          </div>
-
-        </div>
+  </div>
+</header>
 
 
-        <div class="hero-card">
+<!-- HERO -->
 
-          <div class="bolt">ϟ</div>
+<section class="hero">
 
-          <h2>
-            STAN ELECTRIC
-          </h2>
+  <div class="container hero-grid">
 
-          <p>
-            Cumming · Alpharetta · Johns Creek · Suwanee · Buford · Roswell · North Atlanta
-          </p>
+    <div>
 
-        </div>
-
+      <div class="eyebrow">
+        STAN ELECTRIC · CUMMING, GEORGIA
       </div>
 
-    </section>
-
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Services
-          </div>
-
-          <h2 class="section-title">
-            Electrical Project Support
-          </h2>
-
-        </div>
-
-
-        <div class="services-grid">
-
-          <div class="service">
-            <div class="service-number">01</div>
-            <h3>Lighting</h3>
-            <p>
-              Light fixture installation, replacements and residential lighting projects.
-            </p>
-          </div>
-
-          <div class="service">
-            <div class="service-number">02</div>
-            <h3>Ceiling Fans</h3>
-            <p>
-              Ceiling fan installation and electrical connections.
-            </p>
-          </div>
-
-          <div class="service">
-            <div class="service-number">03</div>
-            <h3>Outlets & Switches</h3>
-            <p>
-              Residential outlet, switch and dimmer installation and replacement.
-            </p>
-          </div>
-
-          <div class="service">
-            <div class="service-number">04</div>
-            <h3>Troubleshooting</h3>
-            <p>
-              Help identifying electrical issues and troubleshooting residential systems.
-            </p>
-          </div>
-
-          <div class="service">
-            <div class="service-number">05</div>
-            <h3>EV Charging</h3>
-            <p>
-              Electrical project support for EV charger installations.
-            </p>
-          </div>
-
-          <div class="service">
-            <div class="service-number">06</div>
-            <h3>Residential Projects</h3>
-            <p>
-              Electrical support for residential renovations, additions and other projects.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects" class="projects">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Projects
-          </div>
-
-          <h2 class="section-title">
-            Recent Work
-          </h2>
-
-          <p class="project-note">
-            More project photos will be added here.
-          </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-          <div class="project">
-            <span>Residential</span>
-            <h3>Lighting Installation</h3>
-          </div>
-
-          <div class="project">
-            <span>Residential</span>
-            <h3>Electrical Upgrade</h3>
-          </div>
-
-          <div class="project">
-            <span>Electrical</span>
-            <h3>New Circuit</h3>
-          </div>
-
-          <div class="project">
-            <span>Lighting</span>
-            <h3>Fixture Installation</h3>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-      <div class="container about-grid">
-
-        <div class="about-photo">
-          STAN ELECTRIC<br>
-          Project Photo
-        </div>
-
-        <div class="about-text">
-
-          <div class="section-label">
-            About
-          </div>
-
-          <h2 class="section-title">
-            Practical Electrical Support.
-          </h2>
-
-          <br>
-
-          <p>
-            STAN ELECTRIC provides residential electrical project support
-            in Cumming and the North Atlanta area.
-          </p>
-
-          <p>
-            The focus is straightforward: quality workmanship,
-            clear communication and professional service.
-          </p>
-
-          <p>
-            Specific electrical work is performed subject to applicable
-            Georgia licensing and permitting requirements.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SERVICE AREA -->
-
-    <section id="area" class="area">
-
-      <div class="container area-grid">
-
-        <div>
-
-          <div class="section-label">
-            Service Area
-          </div>
-
-          <h2 class="section-title">
-            North Atlanta
-          </h2>
-
-          <p style="margin-top:20px;color:#555;">
-            Serving homeowners in and around:
-          </p>
-
-          <div class="area-list">
-
-            <div>Cumming</div>
-            <div>Alpharetta</div>
-            <div>Johns Creek</div>
-            <div>Suwanee</div>
-            <div>Buford</div>
-            <div>Roswell</div>
-
-          </div>
-
-        </div>
-
-
-        <div class="map">
-
-          <iframe
-            src="https://www.google.com/maps?q=Cumming,+GA&output=embed"
-            loading="lazy">
-          </iframe>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact">
-
-      <div class="container contact-grid">
-
-        <div>
-
-          <h2>
-            Need electrical work?
-          </h2>
-
-          <p>
-            Call or text STAN ELECTRIC to discuss your project.
-          </p>
-
-        </div>
-
-        <a
-          href="tel:+14049367444"
-          class="contact-button">
-          (404) 936-7444
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="container footer-grid">
-
-      <p>
-        © 2026 STAN ELECTRIC. All rights reserved.
+      <h1>
+        Reliable Electrical Work for Your Home.
+      </h1>
+
+      <p class="hero-text">
+        Residential electrical project support for homeowners
+        throughout Cumming and North Atlanta.
       </p>
 
-      <div class="footer-links">
+      <div class="buttons">
 
-        <a href="tel:+14049367444">
+        <a href="#quote" class="button primary">
+          Request a Quote
+        </a>
+
+        <a href="tel:+14049367444" class="button secondary">
           Call / Text
         </a>
 
-        <a
-          href="https://www.instagram.com/stan.electric.ga/"
-          target="_blank">
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <div class="bolt">ϟ</div>
+
+      <h2>STAN ELECTRIC</h2>
+
+      <p>
+        Cumming · Alpharetta · Johns Creek · Suwanee ·
+        Buford · Roswell · North Atlanta
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-label">Services</div>
+
+    <h2 class="section-title">
+      Electrical Project Support
+    </h2>
+
+    <p class="section-description">
+      Residential electrical support for lighting, electrical
+      installations, troubleshooting and other projects.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <div class="number">01</div>
+        <h3>Lighting</h3>
+        <p>Light fixture installation and residential lighting projects.</p>
+      </div>
+
+      <div class="service">
+        <div class="number">02</div>
+        <h3>Ceiling Fans</h3>
+        <p>Ceiling fan installation and electrical connections.</p>
+      </div>
+
+      <div class="service">
+        <div class="number">03</div>
+        <h3>Outlets & Switches</h3>
+        <p>Residential outlets, switches and dimmer installation.</p>
+      </div>
+
+      <div class="service">
+        <div class="number">04</div>
+        <h3>Troubleshooting</h3>
+        <p>Help identifying and troubleshooting residential electrical issues.</p>
+      </div>
+
+      <div class="service">
+        <div class="number">05</div>
+        <h3>EV Charging</h3>
+        <p>Electrical project support for EV charger installations.</p>
+      </div>
+
+      <div class="service">
+        <div class="number">06</div>
+        <h3>Residential Projects</h3>
+        <p>Electrical support for renovations, additions and other projects.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="dark">
+
+  <div class="container">
+
+    <div class="section-label">Projects</div>
+
+    <h2 class="section-title">
+      Recent Work
+    </h2>
+
+    <p class="section-description">
+      A selection of residential electrical projects.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project">
+        <span>Residential</span>
+        <h3>Lighting Installation</h3>
+      </div>
+
+      <div class="project">
+        <span>Residential</span>
+        <h3>Electrical Upgrade</h3>
+      </div>
+
+      <div class="project">
+        <span>Electrical</span>
+        <h3>New Circuit</h3>
+      </div>
+
+      <div class="project">
+        <span>Lighting</span>
+        <h3>Fixture Installation</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section id="instagram">
+
+  <div class="container">
+
+    <div class="instagram-header">
+
+      <div>
+
+        <div class="section-label">
           Instagram
-        </a>
+        </div>
+
+        <h2 class="section-title">
+          Follow Our Work
+        </h2>
+
+        <p class="section-description">
+          See recent projects and electrical work from STAN ELECTRIC.
+        </p>
+
+      </div>
+
+      <a
+        href="https://www.instagram.com/stan.electric.ga/"
+        target="_blank"
+        class="instagram-button">
+        @stan.electric.ga
+      </a>
+
+    </div>
+
+
+    <div class="instagram-grid">
+
+      <div class="instagram-card">
+        Instagram Post
+      </div>
+
+      <div class="instagram-card">
+        Instagram Post
+      </div>
+
+      <div class="instagram-card">
+        Instagram Post
+      </div>
+
+      <div class="instagram-card">
+        Instagram Post
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GOOGLE REVIEWS -->
+
+<section id="reviews" class="reviews">
+
+  <div class="container">
+
+    <div class="section-label">
+      Google Reviews
+    </div>
+
+    <h2 class="section-title">
+      What Customers Say
+    </h2>
+
+    <p class="section-description">
+      Real customer reviews will appear here automatically
+      after we connect Google Business Profile.
+    </p>
+
+
+    <div class="reviews-grid">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Google review will appear here.</p>
+        <div class="review-author">Customer</div>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Google review will appear here.</p>
+        <div class="review-author">Customer</div>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>Google review will appear here.</p>
+        <div class="review-author">Customer</div>
+      </div>
+
+    </div>
+
+
+    <a
+      href="https://g.page/r/CZJgxCTlBTC-EBM/review"
+      target="_blank"
+      class="google-button">
+      Leave a Google Review
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-photo">
+      STAN ELECTRIC<br>
+      Owner / Project Photo
+    </div>
+
+    <div>
+
+      <div class="section-label">
+        About STAN ELECTRIC
+      </div>
+
+      <h2 class="section-title">
+        Practical Electrical Support.
+      </h2>
+
+      <div class="about-text">
+
+        <p>
+          STAN ELECTRIC provides residential electrical
+          project support in Cumming and the North Atlanta area.
+        </p>
+
+        <p>
+          The focus is straightforward: quality workmanship,
+          clear communication and professional service.
+        </p>
+
+        <p>
+          Specific electrical work is performed subject to
+          applicable Georgia licensing and permitting requirements.
+        </p>
 
       </div>
 
     </div>
 
-  </footer>
+  </div>
+
+</section>
+
+
+<!-- SERVICE AREA + GOOGLE MAPS -->
+
+<section id="area" class="area">
+
+  <div class="container area-grid">
+
+    <div>
+
+      <div class="section-label">
+        Service Area
+      </div>
+
+      <h2 class="section-title">
+        North Atlanta
+      </h2>
+
+      <p class="section-description">
+        Serving homeowners in and around:
+      </p>
+
+      <div class="area-list">
+
+        <div>Cumming</div>
+        <div>Alpharetta</div>
+        <div>Johns Creek</div>
+        <div>Suwanee</div>
+        <div>Buford</div>
+        <div>Roswell</div>
+
+      </div>
+
+    </div>
+
+
+    <div class="map-placeholder">
+
+      <div>
+        <strong>Google Maps</strong>
+        <br><br>
+        Cumming, Georgia
+        <br>
+        North Atlanta Service Area
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REQUEST A QUOTE -->
+
+<section id="quote" class="quote">
+
+  <div class="container quote-grid">
+
+    <div>
+
+      <div class="section-label">
+        Request a Quote
+      </div>
+
+      <h2 class="section-title">
+        Tell Us About Your Project.
+      </h2>
+
+      <p class="quote-description">
+        Submit your project details and STAN ELECTRIC
+        will contact you to discuss the next steps.
+      </p>
+
+      <p class="quote-description">
+        After we connect the SMS system, you will receive
+        an automatic confirmation by text message.
+      </p>
+
+    </div>
+
+
+    <form class="quote-form" id="quoteForm">
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email">
+        </div>
+
+        <div class="field">
+          <label for="zip">ZIP Code</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip">
+        </div>
+
+        <div class="field full">
+          <label for="project">
+            Project Type *
+          </label>
+
+          <select id="project" name="project" required>
+
+            <option value="">
+              Select project type
+            </option>
+
+            <option>Lighting</option>
+            <option>Ceiling Fan</option>
+            <option>Outlet / Switch</option>
+            <option>Troubleshooting</option>
+            <option>EV Charger</option>
+            <option>Electrical Upgrade</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+        <div class="field full">
+
+          <label for="details">
+            Tell us about your project *
+          </label>
+
+          <textarea
+            id="details"
+            name="details"
+            placeholder="Describe what you need help with..."
+            required></textarea>
+
+        </div>
+
+      </div>
+
+
+      <label class="checkbox">
+
+        <input
+          type="checkbox"
+          id="smsConsent"
+          name="smsConsent"
+          required>
+
+        <span>
+          I agree to receive text messages from STAN ELECTRIC
+          regarding my request. Message frequency may vary.
+          Message and data rates may apply.
+        </span>
+
+      </label>
+
+
+      <button
+        type="submit"
+        class="submit-button">
+        Submit Request
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+  <div class="container contact-grid">
+
+    <div>
+
+      <h2>
+        Need electrical work?
+      </h2>
+
+      <p>
+        Call or text STAN ELECTRIC to discuss your project.
+      </p>
+
+    </div>
+
+    <a
+      href="tel:+14049367444"
+      class="contact-button">
+      (404) 936-7444
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <p>
+      © 2026 STAN ELECTRIC. All rights reserved.
+    </p>
+
+    <div class="footer-links">
+
+      <a href="tel:+14049367444">
+        Call / Text
+      </a>
+
+      <a
+        href="https://www.instagram.com/stan.electric.ga/"
+        target="_blank">
+        Instagram
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  document
+    .getElementById("quoteForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert(
+        "Thank you! Your request has been received. STAN ELECTRIC will contact you soon."
+      );
+
+    });
+
+</script>
 
 </body>
 </html>
