@@ -1254,6 +1254,58 @@
 
     });
 
+</script> <script>
+async function loadGoogleReviews() {
+  try {
+    const { Place } = await google.maps.importLibrary("places");
+
+    const place = new Place({
+      id: "ChIJ2zCKI_qB9YgRkmDEJOUFML4"
+    });
+
+    await place.fetchFields({
+      fields: ["displayName", "rating", "userRatingCount", "reviews"]
+    });
+
+    const reviewsGrid = document.querySelector(".reviews-grid");
+
+    if (!reviewsGrid || !place.reviews) return;
+
+    reviewsGrid.innerHTML = "";
+
+    place.reviews.forEach((review) => {
+      const card = document.createElement("div");
+      card.className = "review";
+
+      const stars = document.createElement("div");
+      stars.className = "stars";
+      stars.textContent = "★★★★★";
+
+      const text = document.createElement("p");
+      text.textContent = review.text || "";
+
+      const author = document.createElement("div");
+      author.className = "review-author";
+      author.textContent =
+        review.authorAttribution?.displayName || "Google Customer";
+
+      card.appendChild(stars);
+      card.appendChild(text);
+      card.appendChild(author);
+
+      reviewsGrid.appendChild(card);
+    });
+
+  } catch (error) {
+    console.error("Google Reviews error:", error);
+  }
+}
+
+loadGoogleReviews();
+</script> 
+  
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9L-YiU8Eo4UB0GeoXzcf3miJ77gqeQw&loading=async">
 </script>
 
 </body>
